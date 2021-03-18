@@ -34,11 +34,41 @@ namespace OOPPractice
 
     }
 
+    abstract class A
+
+    {
+        public virtual void display() {
+        
+        }
+
+        public abstract void display1();
+    }
+
+    // derived class name 'derived'
+    // 'baseClass' inherit here
+    class B : A
+    {
+
+        // overriding
+        public override void display()
+        {
+            Console.WriteLine("Derived class");
+        }
+
+        public override void display1()
+        {
+            Console.WriteLine("Derived class");
+        }
+    }
+
     class Anything
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hello");
+            A b = new B();
+
+            b.display();
+            b.display1();
         }
     }
 }
