@@ -13,6 +13,9 @@ namespace MyFirstApplication
 
         static void Main(string[] args)
         {
+            string s1 = "murad";
+            string s2 = "murad";
+            Console.WriteLine(s1.Equals(s2));
             // Ctrl + F5 shortcut to run, only F5 to debug
 
             // Strings
@@ -66,6 +69,26 @@ namespace MyFirstApplication
                 }
                 Console.Write("\n");
             }
+
+            // testing boxing unboxing
+            int t = 1;
+            object o = t;
+            double t1 = (int)o;
+            Console.WriteLine(t1 + " " + t1.GetType());
+
+            int[] array = { 1, 2, 3, 4 };
+            try
+            {
+                array[7] = array[1] / 0;
+            }
+            catch (IndexOutOfRangeException e) {
+                Console.WriteLine("here");
+            }
+            catch (ArithmeticException e)
+            {
+                Console.WriteLine("there");
+            }
+
         }
     }
 }

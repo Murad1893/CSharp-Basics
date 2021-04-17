@@ -6,6 +6,23 @@ using System.Threading.Tasks;
 
 namespace OOPPractice
 {
+    interface diamond1 {
+        void display();
+    }
+
+    interface diamond2
+    {
+        void display();
+    }
+
+    class diamondSolver: diamond1, diamond2{
+
+        public void display() {
+            Console.WriteLine("Murad");
+        }
+    }
+
+
     interface TesterClass {
         int Name
         {
@@ -65,10 +82,14 @@ namespace OOPPractice
     {
         static void Main(string[] args)
         {
-            A b = new B();
+            //A b = new B();
 
-            b.display();
-            b.display1();
+            //b.display();
+            //b.display1();
+
+            diamondSolver d = new diamondSolver();
+
+            d.display();
         }
     }
 }
